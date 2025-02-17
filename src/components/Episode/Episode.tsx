@@ -8,6 +8,7 @@ interface EpisodeProps {
     preview: string;
     hls: {
       fhd: string;
+      hd: string;
     };
   };
 }
@@ -22,7 +23,7 @@ const Episide: React.FC<EpisodeProps> = ({ openVideoPlayer, item }) => {
         className={styles.episode_button}
         key={item.episode}
         style={{ backgroundImage: `url(${baseSrcImage + item?.preview})` }}
-        onClick={() => openVideoPlayer(item?.hls.fhd)}
+        onClick={() => openVideoPlayer(item?.hls.hd)}
       >
         <span>{item.episode} серия</span>
         <span>{item.name}</span>

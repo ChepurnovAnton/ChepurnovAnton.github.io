@@ -2,13 +2,15 @@ import styles from "./Catalog.module.scss";
 import { useGetAnimeQuery, useSearchAnimeQuery } from "../../API/animeApi";
 import { useState } from "react";
 import AnimeList from "../../components/AnimeList/AnimeList";
+import { useDebounce } from "use-debounce";
 
 const Catalog = () => {
   const [search, setSearch] = useState('')
+  const [debouncedSearch] = useDebounce(search, 1000)
   const { data: animeData = [], isLoading } = useGetAnimeQuery(1)
-  const { data: searchData = [], isLoading: isSearchLoading } = useSearchAnimeQuery(search)
+  const { data: searchData = [], isLoading: isSearchLoading } = useSearchAnimeQuery(debouncedSearch)
 
-  const animeList = search ? searchData?.list : animeData?.list
+  const animeList = debouncedSearch ? searchData?.list : animeData?.list
 
   if (isLoading || isSearchLoading) return <div>Loading...</div>
 

@@ -23,8 +23,6 @@ const AnimeItemPage = () => {
 
   if (isLoading) return <div>Loading...</div>
 
-  console.log(anime);
-
 
   return (
     <section className={styles.page}>
