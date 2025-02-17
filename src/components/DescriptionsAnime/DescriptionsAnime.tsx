@@ -1,8 +1,35 @@
-import React from 'react'
+
 import styles from './DescriptionsAnime.module.scss'
 
 
-const DescriptionsAnime = ({anime, baseSrcImage}) => {
+interface Anime {
+  posters: {
+    small: {
+      url: string;
+    };
+  };
+  names: {
+    ru: string;
+    en: string;
+  };
+  type: {
+    string: string;
+    length?: string;
+    episodes?: number;
+  };
+  genres: string[];
+  season: {
+    year: number;
+  };
+  description: string;
+}
+
+interface DescriptionsAnimeProps {
+  anime: Anime;
+  baseSrcImage: string;
+}
+
+const DescriptionsAnime: React.FC<DescriptionsAnimeProps> = ({anime, baseSrcImage}) => {
   return (
     <div className={styles.info}>
       <img className={styles.poster} src={baseSrcImage + anime?.posters.small.url} alt="" />

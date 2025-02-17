@@ -1,5 +1,4 @@
 import styles from "./Catalog.module.scss";
-import { Link } from "react-router";
 import { useGetAnimeQuery, useSearchAnimeQuery } from "../../API/animeApi";
 import { useState } from "react";
 import AnimeList from "../../components/AnimeList/AnimeList";
@@ -7,11 +6,11 @@ import AnimeList from "../../components/AnimeList/AnimeList";
 const Catalog = () => {
   const [search, setSearch] = useState('')
   const { data: animeData = [], isLoading } = useGetAnimeQuery(1)
-  const { data: searchData = [], isPending } = useSearchAnimeQuery(search)
+  const { data: searchData = [], isLoading: isSearchLoading } = useSearchAnimeQuery(search)
 
   const animeList = search ? searchData?.list : animeData?.list
 
-  if (isLoading || isPending) return <div>Loading...</div>
+  if (isLoading || isSearchLoading) return <div>Loading...</div>
 
   return (
     <section className={styles.catalog}>

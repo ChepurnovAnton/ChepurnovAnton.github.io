@@ -1,15 +1,25 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import styles from './Episodes.module.scss';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import Episode from '../Episode/Episode';
 
 
-const Episodes = ({ series = [] }) => {
+interface SeriesItem {
+  uuid: string;
+  episode: number;
+  name: string;
+  preview: string;
+  hls: {
+    fhd: string;
+  };
+}
+
+const Episodes = ({ series = [] }: { series: SeriesItem[] }) => {
   const [activeEpisode, setActiveEpisode] = useState('');
   const [searchEpisode, setSearchEpisode] = useState('');
   const [openPlayer, setOpenPlayer] = useState(false);
 
-  const openVideoPlayer = useCallback((url) => {
+  const openVideoPlayer = useCallback((url: string) => {
     setActiveEpisode(url);
     setOpenPlayer(true);
   }, []);
@@ -20,7 +30,7 @@ const Episodes = ({ series = [] }) => {
 
   }, [series, searchEpisode]);
 
-  const handleSearchChange = (evt) => {
+  const handleSearchChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setSearchEpisode(evt.target.value);
   };
 
@@ -36,12 +46,11 @@ const Episodes = ({ series = [] }) => {
       </div>
 
       <div className={styles.episodes}>
-        {filteredSeries.map(series => <Episode key={series.uuid} openVideoPlayer={openVideoPlayer} item={series} progressBar={'10'} />)}
+        {filteredSeries.map(series => <Episode key={series.uuid} openVideoPlayer={openVideoPlayer} item={series} />)}
       </div>
 
       {openPlayer && (
         <VideoPlayer
-          series={series}
           activeEpisode={activeEpisode}
           setOpenPlayer={setOpenPlayer}
         />

@@ -1,6 +1,18 @@
 import styles from './Episode.module.scss'
 
-const Episide = ({ openVideoPlayer, item}) => {
+interface EpisodeProps {
+  openVideoPlayer: (url: string) => void;
+  item: {
+    episode: number;
+    name: string;
+    preview: string;
+    hls: {
+      fhd: string;
+    };
+  };
+}
+
+const Episide: React.FC<EpisodeProps> = ({ openVideoPlayer, item }) => {
   const baseSrcImage = 'https://dl-20250210-4.anilib.one';
 
 

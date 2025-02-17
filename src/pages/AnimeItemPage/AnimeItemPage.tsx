@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import { useParams } from 'react-router'
 import Episodes from '../../components/Episodes/Episodes'
 import styles from './AnimeItemPage.module.scss'
@@ -19,7 +19,7 @@ const AnimeItemPage = () => {
 
   useEffect(() => {
     dispatch(changeCurrentPage(anime?.names.ru))
-  }, [anime])
+  }, [anime, dispatch])
 
   if (isLoading) return <div>Loading...</div>
 
