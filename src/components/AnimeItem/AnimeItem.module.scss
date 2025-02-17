@@ -1,0 +1,58 @@
+.post {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    'logo name'
+    'logo genres'
+    'logo season'
+    'logo description'
+  ;
+  row-gap: 1px;
+  column-gap: 20px;
+  background-color: rgb(33, 33, 33);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.126);
+  padding: 20px;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.name {
+  grid-area: name;
+  align-self: center;
+
+  h3 {
+    color: rgba(255, 255, 255, 0.558);
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px;
+  grid-area: logo;
+  max-width: 180px;
+}
+
+.genres {
+  grid-area: genres;
+  color: rgba(255, 255, 255, 0.558);
+  font-size: 15px;
+}
+
+.season {
+  grid-area: season;
+  color: rgba(255, 255, 255, 0.558);
+  font-size: 15px;
+}
+
+.description {
+  grid-area: description;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+}

@@ -1,0 +1,25 @@
+.menu {
+  padding: 20px 0;
+}
+
+.menu_list {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.053) ;
+}
+
+.link {
+  background: transparent;
+  font-size: 15px;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+.active {
+  border: none;
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgb(255, 0, 0);
+  background: transparent;
+  color: red
+}

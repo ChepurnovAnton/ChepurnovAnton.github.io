@@ -1,0 +1,26 @@
+
+.player {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: rgb(33, 33, 33);
+  height: 50px;
+  width: 310px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  padding-left: 15px;
+}
+
+.episodes {
+  background-color: rgb(33, 33, 33);
+  border-radius: 10px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}

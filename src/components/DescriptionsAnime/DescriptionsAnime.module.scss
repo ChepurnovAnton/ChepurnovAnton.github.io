@@ -1,0 +1,57 @@
+.info {
+  padding-top: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 200px auto 1fr auto;
+  grid-template-areas:
+    'logo title'
+    'logo subtitle'
+    'logo types'
+    'description description'
+  ;
+  gap: 20px;
+  // padding: 0 50px;
+}
+
+.poster {
+  border-radius: 10px;
+  grid-area: logo;
+  height: 400px;
+}
+
+.title {
+  font-size: 40px;
+  padding-top: 20px;
+  grid-area: title;
+  align-self: end;
+}
+
+.sub_title {
+  color: rgba(255, 255, 255, 0.459);
+  font-size: 15px;
+  grid-area: subtitle;
+  // align-self: center;
+}
+
+.types {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  grid-area: types;
+  align-self: flex-start;
+}
+
+.type {
+  color: rgba(255, 255, 255, 0.459);
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.759);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: start;
+  grid-area: description;
+}
