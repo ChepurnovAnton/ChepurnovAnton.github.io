@@ -1,7 +1,7 @@
 import { useEffect} from 'react'
 import { useParams } from 'react-router'
 import Episodes from '../../components/Episodes/Episodes'
-import styles from './AnimeItemPage.module.scss'
+import styles from './AnimePage.module.scss'
 
 import DescriptionsAnime from '../../components/DescriptionsAnime/DescriptionsAnime'
 import AnimePageMenu from '../../components/AnimePageMenu/AnimePageMenu'
@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux'
 import { changeCurrentPage } from '../../redux-toolkit/slices/currentPageSlice'
 import { useGetOneAnimeQuery } from '../../API/animeApi'
 
-const AnimeItemPage = () => {
+const AnimePage = () => {
   const dispatch = useDispatch()
   const { id } = useParams()
   const baseSrcImage = 'https://dl-20250210-4.anilib.one'
@@ -33,4 +33,4 @@ const AnimeItemPage = () => {
   )
 }
 
-export default AnimeItemPage
+export default AnimePage

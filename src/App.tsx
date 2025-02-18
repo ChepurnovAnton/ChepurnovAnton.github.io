@@ -1,6 +1,6 @@
 import "./App.css";
-import Catalog from './pages/Catalog/Catalog'
-import AnimeItemPage from './pages/AnimeItemPage/AnimeItemPage'
+import CatalogPage from './pages/CatalogPage/CatalogPage'
+import AnimePage from './pages/AnimePage/AnimePage'
 import { Routes, Route } from 'react-router'
 import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
 import { store } from './redux-toolkit/store'
@@ -13,8 +13,8 @@ function App() {
         <Breadcrumbs />
         <main>
           <Routes>
-            <Route path="/:id" element={<AnimeItemPage />} />
-            <Route path="/" element={<Catalog />} />
+            <Route path="/:id" element={<AnimePage />} />
+            <Route path="/" element={<CatalogPage />} />
           </Routes>
         </main>
       </Provider>

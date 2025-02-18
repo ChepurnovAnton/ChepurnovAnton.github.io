@@ -27,6 +27,9 @@ interface AnimeListProps {
   animeList: Anime[];
 }
 
+
+
+
 const AnimeList: React.FC<AnimeListProps> = ({animeList = []}) => {
   return (
 
