@@ -33,7 +33,6 @@ const CatalogPage = () => {
             status={status}
           />
         </div>
-
         <div>
           <Filter />
         </div>

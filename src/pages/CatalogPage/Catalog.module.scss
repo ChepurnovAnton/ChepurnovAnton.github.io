@@ -6,6 +6,7 @@
 
 .anime_list {
   display: grid;
+  justify-content: space-between;
   grid-template-columns: auto auto;
   gap: 10px;
 }
