@@ -11,8 +11,13 @@
   row-gap: 1px;
   column-gap: 20px;
   background-color: rgb(33, 33, 33);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.126);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.126);
   padding: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(68, 68, 68, 0.638);
+  }
 }
 
 .title {

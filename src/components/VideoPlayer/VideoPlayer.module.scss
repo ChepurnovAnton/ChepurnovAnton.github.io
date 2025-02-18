@@ -8,12 +8,12 @@
   padding: 50px;
 }
 
-.back_button { 
-  margin-left: 10px;
-  background-color: transparent;
+.button { 
+  // margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.167);
   border: none;
-  width: 50px;
-  padding: 10px;
+  width: 35px;
+  padding: 5px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -21,4 +21,15 @@
   &:hover {
     background-color: rgba(255, 255, 255, 0.366);
   }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.anime_name {
+  font-size: 15px;
 }

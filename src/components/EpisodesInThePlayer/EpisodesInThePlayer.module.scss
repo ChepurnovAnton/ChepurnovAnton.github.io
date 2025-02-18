@@ -1,0 +1,82 @@
+.episodes {
+  background-color: rgb(33, 33, 33);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 440px;
+  z-index: 1;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  overflow: scroll;
+}
+
+
+.title {
+  display: grid;
+  grid-template-areas:
+    'title close'
+    'subtitle close';
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 50px 0 60px;
+  margin-top: 50px;
+
+  h3 {
+    grid-area: title;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+
+  p {
+    grid-area: subtitle;
+    font-size: 12px;
+  }
+
+}
+
+.button {
+  grid-area: close;
+  background-color: rgba(255, 255, 255, 0.167);
+  border: none;
+  // width: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  align-self: center;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.366);
+  }
+}
+
+.input_wripper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 50px 0 50px;
+}
+
+.input {
+  background-color: rgb(60, 59, 59);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  width: 80%;
+  color: white;
+}
+
+.series {
+  display: grid;
+  grid-auto-rows: min-content;
+  margin-top: 30px;
+  justify-content: center;
+  gap: 10px;
+}
+

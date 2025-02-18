@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { animeApi } from "../API/animeApi";
 import currentPage from './slices/currentPageSlice'
+import currentEpisode from './slices/currentEpisodeSlice'
 
 export const store = configureStore({
   reducer: {
     [animeApi.reducerPath]: animeApi.reducer,
-    currentPage: currentPage
+    currentPage: currentPage,
+    currentEpisode : currentEpisode
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(animeApi.middleware),
