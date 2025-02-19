@@ -8,7 +8,7 @@ import { useDebounce } from "use-debounce";
 const CatalogPage = () => {
   const [search, setSearch] = useState("");
   const [debouncedSearch] = useDebounce(search, 1000);
-  const { data: animeData = [], isLoading } = useGetAnimeQuery(1);
+  const { data: animeData = [], isLoading } = useGetAnimeQuery(2);
   const { data: searchData = [], status } =
     useSearchAnimeQuery(debouncedSearch);
 
@@ -33,9 +33,9 @@ const CatalogPage = () => {
             status={status}
           />
         </div>
-        <div>
+        {/* <div>
           <Filter />
-        </div>
+        </div> */}
       </div>
     </section>
   );

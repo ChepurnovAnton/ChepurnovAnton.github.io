@@ -1,6 +1,6 @@
 .post {
   display: grid;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   grid-template-areas:
     'logo name'
@@ -8,10 +8,9 @@
     'logo season'
     'logo description'
   ;
-  row-gap: 1px;
+  grid-auto-rows: min-content;
   column-gap: 20px;
   background-color: rgb(33, 33, 33);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.126);
   padding: 20px;
   border-radius: 10px;
 
@@ -28,36 +27,39 @@
 
 .name {
   grid-area: name;
-  align-self: center;
-
   h3 {
     color: rgba(255, 255, 255, 0.558);
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 12px;
+    font-weight: 400;
   }
 }
 
 .img {
-  width: 100%;
   border-radius: 10px;
   grid-area: logo;
-  max-width: 180px;
+  max-width: 140px;
 }
 
 .genres {
   grid-area: genres;
   color: rgba(255, 255, 255, 0.558);
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .season {
   grid-area: season;
   color: rgba(255, 255, 255, 0.558);
   font-size: 15px;
+
 }
 
 .description {
   grid-area: description;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.897);
   font-size: 13px;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

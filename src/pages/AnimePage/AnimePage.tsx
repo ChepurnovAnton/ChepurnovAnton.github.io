@@ -2,6 +2,7 @@ import { useEffect} from 'react'
 import { useParams } from 'react-router'
 import Episodes from '../../components/Episodes/Episodes'
 import styles from './AnimePage.module.scss'
+import AnimePageSkeleton from '../../components/Skeleton/AnimePageSkeleton'
 
 import DescriptionsAnime from '../../components/DescriptionsAnime/DescriptionsAnime'
 import AnimePageMenu from '../../components/AnimePageMenu/AnimePageMenu'
@@ -21,7 +22,7 @@ const AnimePage = () => {
     dispatch(changeCurrentPage(anime?.names.ru))
   }, [anime, dispatch])
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <AnimePageSkeleton/>
 
 
   return (

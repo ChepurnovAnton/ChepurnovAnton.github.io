@@ -38,7 +38,7 @@ const AnimeList: React.FC<AnimeListProps> = ({
   
   const renderLoader = () => {
     const loaderArr = [1, 2, 3, 4, 5, 6];
-    return loaderArr.map((item) => <MyLoader key={item} />);
+    return loaderArr.map((item) => <MyLoader key={item}  />);
   };
 
   const renderAnimeList = () => {

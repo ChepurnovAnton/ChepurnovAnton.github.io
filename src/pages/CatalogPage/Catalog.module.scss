@@ -5,11 +5,7 @@
 }
 
 .anime_list {
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: auto auto;
-  gap: 10px;
-  //
+// width: 1000px;
 }
 
 .search {
@@ -19,7 +15,7 @@
 .input {
   background-color: rgb(33, 33, 33);
   height: 50px;
-  width: 80vw;
+  width: 100%;
   border: none;
   border-radius: 10px;
   outline: none;
